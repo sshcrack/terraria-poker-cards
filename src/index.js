@@ -1,30 +1,30 @@
 /*jshint esversion: 8 */
 
-import fs from "fs";
 import can_pkg from "canvas";
-const {
-    createCanvas,
-    loadImage
-} = can_pkg;
-import {
-    symbols,
-    numbers,
-    colors,
-    other
-} from "./consts.js";
-import {
-    drawSymbols,
-    getSymbols
-} from "./outer/symbols.js";
-import {
-    drawText as drawCardText
-} from './outer/outer.js';
+import fs from "fs";
 import {
     getBaseSize
 } from './base.js';
 import {
-    mirror
+    colors, numbers, other, symbols
+} from "./consts.js";
+import { drawJoker } from './inner/joker.js';
+import { drawNumbers } from './inner/numbers.js';
+import { drawSpecial } from './inner/special.js';
+import {
+    rotate
 } from './outer/mirror.js';
+import {
+    drawText as drawCardText
+} from './outer/outer.js';
+import {
+    drawSymbols,
+    getSymbols
+} from "./outer/symbols.js";
+const {
+    createCanvas,
+    loadImage
+} = can_pkg;
 
 const [base_width, base_height] = getBaseSize();
 const asyncRun = async () => {
@@ -34,27 +34,35 @@ const asyncRun = async () => {
     let topScore  = 0;
     let mirrorScore = 0;
 
-    const together = [...numbers, ...other];
+    const together =[...numbers,...other];
     const proms = imgs.map((img, i) => {
         return Promise.all(together.map(async e => {
-                const buff = await drawCardTop(img, e, colors[i]);
+                const buff = await drawCardTop(img, e);
                 const top = await loadImage(buff);
 
-                const mirrored = await mirror(top);
+                console.log("Rotating")
+                const rotated = await rotate(top);
                 const func = other.includes(e) ? drawSpecial : drawNumbers;
-                const final = await func(mirrored, e);
+                console.log("Drawing...")
+                const final = await func(rotated, e, img, i).catch(e => console.error("Error", e));
 
+                console.log("Writing", `base/edited/${e}${symbols[i]}.png`)
                 fs.writeFileSync(`base/edited/${e}${symbols[i]}.png`, final);
         }));
     });
 
-    await Promise.all(proms);
+    await Promise.all(proms)
+        .catch(e => console.error("Error", e));
+
+    const joker = await drawJoker(0)
+    const joker1 = await drawJoker(1)
+    fs.writeFileSync("base/edited/joker.png", joker)
+    fs.writeFileSync("base/edited/joker1.png", joker1)
     console.log("Done!");
 };
 
 
-asyncRun();
-
+asyncRun().catch(e => console.error(e));
 
 
 async function drawCardTop(img, text, color) {

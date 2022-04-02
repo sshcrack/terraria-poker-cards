@@ -3,10 +3,7 @@ import {
     textStyle
 } from "./consts.js";
 
-let constSize = NaN;
 export function getSizeByWidth(ctx, text, width) {
-    if(!isNaN(constSize))
-        return constSize;
     width = Math.round(width);
 
     let currWidth = -1;
@@ -22,7 +19,5 @@ export function getSizeByWidth(ctx, text, width) {
     }
 
 
-    if (isNaN(constSize))
-        constSize = currTxtSize;
     return currTxtSize;
 }

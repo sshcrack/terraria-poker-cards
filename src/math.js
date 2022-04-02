@@ -28,9 +28,17 @@ export function getPosByMargin(margin, width, adjust) {
 }
 
 
+export function scaleKeepRatioSpecific(width, height, maxWidth, maxHeight, lowest = false) {
+    const ratio = (lowest ? Math.max : Math.min)(width / maxWidth, height / maxHeight);
+    return [width / ratio, height / ratio];
+}
 
 
 export function scaleKeepRatio(width, height, max) {
-    const ratio = Math.min(width / max, height / max);
+    return scaleKeepRatioSpecific(width, height, max, max)
+}
+
+export function scaleKeepRatioOne(width, height, max, scaleWidth) {
+    const ratio = scaleWidth ? width / max : height / max;
     return [width / ratio, height / ratio];
 }

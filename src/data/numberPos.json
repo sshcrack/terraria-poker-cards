@@ -1,0 +1,412 @@
+[
+    {
+        "comment": "Taken from https://fineartamerica.com/featured/poker-playing-card-6-spade-miroslav-nemecek.html",
+        "card": 2,
+        "positions": [
+            {
+                "x": 332,
+                "y": 121,
+                "width": 158,
+                "mirrored": false
+            },
+            {
+                "x": 332,
+                "y": 844,
+                "width": 158,
+                "mirrored": true
+            }
+        ]
+    },
+    {
+        "card": 3,
+        "positions": [
+            {
+                "x": 332,
+                "y": 121,
+                "width": 158,
+                "mirrored": false
+            },
+
+            {
+                "x": 332,
+                "y": 483,
+                "width": 158,
+                "mirrored": false
+            },
+
+            {
+                "x": 332,
+                "y": 844,
+                "width": 158,
+                "mirrored": true
+            }
+        ]
+    },
+    {
+        "card": 4,
+        "positions": [
+            {
+                "x": 181,
+                "y": 121,
+                "width": 158,
+                "mirrored": false
+            },
+            {
+                "x": 181,
+                "y": 880,
+                "width": 158,
+                "mirrored": true
+            },
+
+
+
+            {
+                "x": 483,
+                "y": 121,
+                "width": 158,
+                "mirrored": false
+            },
+            {
+                "x": 483,
+                "y": 880,
+                "width": 158,
+                "mirrored": true
+            }
+        ]
+    },
+    {
+        "card": 5,
+        "positions": [
+            {
+                "x": 181,
+                "y": 121,
+                "width": 158,
+                "mirrored": false
+            },
+            {
+                "x": 181,
+                "y": 880,
+                "width": 158,
+                "mirrored": true
+            },
+
+
+            {
+                "x": 332,
+                "y": 483,
+                "width": 158,
+                "mirrored": false
+            },
+
+
+
+            {
+                "x": 483,
+                "y": 121,
+                "width": 158,
+                "mirrored": false
+            },
+            {
+                "x": 483,
+                "y": 880,
+                "width": 158,
+                "mirrored": true
+            }
+        ]
+    },
+    {
+        "card": 6,
+        "positions": [
+            {
+                "x": 181,
+                "y": 121,
+                "width": 158,
+                "mirrored": false
+            },
+            {
+                "x": 181,
+                "y": 483,
+                "width": 158,
+                "mirrored": false
+            },
+            {
+                "x": 181,
+                "y": 880,
+                "width": 158,
+                "mirrored": true
+            },
+
+
+
+
+            {
+                "x": 483,
+                "y": 121,
+                "width": 158,
+                "mirrored": false
+            },
+            {
+                "x": 483,
+                "y": 483,
+                "width": 158,
+                "mirrored": false
+            },
+            {
+                "x": 483,
+                "y": 880,
+                "width": 158,
+                "mirrored": true
+            }
+        ]
+    },
+    {
+        "card": 7,
+        "positions": [
+            {
+                "x": 181,
+                "y": 121,
+                "width": 158,
+                "mirrored": false
+            },
+            {
+                "x": 181,
+                "y": 483,
+                "width": 158,
+                "mirrored": false
+            },
+            {
+                "x": 181,
+                "y": 880,
+                "width": 158,
+                "mirrored": true
+            },
+
+
+
+            {
+                "x": 332,
+                "y": 663,
+                "width": 158,
+                "mirrored": true
+            },
+
+
+
+            {
+                "x": 483,
+                "y": 121,
+                "width": 158,
+                "mirrored": false
+            },
+            {
+                "x": 483,
+                "y": 483,
+                "width": 158,
+                "mirrored": false
+            },
+            {
+                "x": 483,
+                "y": 880,
+                "width": 158,
+                "mirrored": true
+            }
+        ]
+    },
+    {
+        "card": 8,
+        "positions": [
+            {
+                "x": 181,
+                "y": 121,
+                "width": 158,
+                "mirrored": false
+            },
+            {
+                "x": 181,
+                "y": 483,
+                "width": 158,
+                "mirrored": false
+            },
+            {
+                "x": 181,
+                "y": 880,
+                "width": 158,
+                "mirrored": true
+            },
+
+
+
+            {
+                "x": 332,
+                "y": 663,
+                "width": 158,
+                "mirrored": true
+            },
+            {
+                "x": 332,
+                "y": 302,
+                "width": 158,
+                "mirrored": false
+            },
+
+
+
+            {
+                "x": 483,
+                "y": 121,
+                "width": 158,
+                "mirrored": false
+            },
+            {
+                "x": 483,
+                "y": 483,
+                "width": 158,
+                "mirrored": false
+            },
+            {
+                "x": 483,
+                "y": 880,
+                "width": 158,
+                "mirrored": true
+            }
+        ]
+    },
+    {
+        "card": 9,
+        "positions": [
+            {
+                "x": 181,
+                "y": 121,
+                "width": 150,
+                "mirrored": false
+            },
+            {
+                "x": 181,
+                "y": 363,
+                "width": 150,
+                "mirrored": false
+            },
+            {
+                "x": 181,
+                "y": 604,
+                "width": 150,
+                "mirrored": true
+            },
+            {
+                "x": 181,
+                "y": 880,
+                "width": 150,
+                "mirrored": true
+            },
+
+
+
+            {
+                "x": 332,
+                "y": 483,
+                "width": 150,
+                "mirrored": false
+            },
+
+
+
+
+            {
+                "x": 483,
+                "y": 121,
+                "width": 150,
+                "mirrored": false
+            },
+            {
+                "x": 483,
+                "y": 363,
+                "width": 150,
+                "mirrored": false
+            },
+            {
+                "x": 483,
+                "y": 604,
+                "width": 150,
+                "mirrored": true
+            },
+            {
+                "x": 483,
+                "y": 880,
+                "width": 150,
+                "mirrored": true
+            }
+        ]
+    },
+    {
+        "card": 10,
+        "positions": [
+            {
+                "x": 181,
+                "y": 121,
+                "width": 150,
+                "mirrored": false
+            },
+            {
+                "x": 181,
+                "y": 363,
+                "width": 150,
+                "mirrored": false
+            },
+            {
+                "x": 181,
+                "y": 604,
+                "width": 150,
+                "mirrored": true
+            },
+            {
+                "x": 181,
+                "y": 880,
+                "width": 150,
+                "mirrored": true
+            },
+
+
+
+            {
+                "x": 332,
+                "y": 242,
+                "width": 150,
+                "mirrored": false
+            },
+            {
+                "x": 332,
+                "y": 723,
+                "width": 150,
+                "mirrored": true
+            },
+
+
+
+
+            {
+                "x": 483,
+                "y": 121,
+                "width": 150,
+                "mirrored": false
+            },
+            {
+                "x": 483,
+                "y": 363,
+                "width": 150,
+                "mirrored": false
+            },
+            {
+                "x": 483,
+                "y": 604,
+                "width": 150,
+                "mirrored": true
+            },
+            {
+                "x": 483,
+                "y": 880,
+                "width": 150,
+                "mirrored": true
+            }
+        ]
+    }
+]

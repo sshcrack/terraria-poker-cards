@@ -26,5 +26,5 @@ export function getBaseSize() {
 
 export async function drawBaseImage(ctx) {
     const baseImg = await loadImage(baseFile);
-    ctx.drawImage(baseImg, 0, 0);
+    //ctx.drawImage(baseImg, 0, 0);
 }

@@ -2,24 +2,26 @@
 
 import {
     symbols,
-    marginText, marginImageY, symbolSize
+    marginText, marginImageY, symbolSize, marginImageX
 } from '../consts.js';
 import can_pkg from "canvas";
-import { getPosByMargin, scaleKeepRatio } from '../math.js';
+import { getPosByMargin, scaleKeepRatio, scaleKeepRatioOne } from '../math.js';
 const {
     loadImage
 } = can_pkg;
 
-export function drawSymbols(ctx, img) {
+export function drawSymbols(ctx, img, txtSize) {
     const {
         width: img_width,
         height: img_height
     } = img;
 
     const [txtX, txtY] = marginText;
-    const [scaled_w, scaled_h] = scaleKeepRatio(img_width, img_height, symbolSize);
+    const { width: txtSizeW } = txtSize
+    const [scaled_w, scaled_h] = scaleKeepRatioOne(img_width, img_height, symbolSize, true);
 
-    const pos = getPosByMargin([txtX, marginImageY + txtY], symbolSize);
+    const numberMarginX = marginImageX + 90
+    const pos = getPosByMargin([numberMarginX, marginImageY + txtY], symbolSize);
 
     pos.forEach(e => {
         const [x, y] = e;
