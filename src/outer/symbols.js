@@ -1,11 +1,8 @@
 /*jshint esversion: 8 */
 
-import {
-    symbols,
-    marginText, marginImageY, symbolSize, marginImageX
-} from '../consts.js';
 import can_pkg from "canvas";
-import { getPosByMargin, scaleKeepRatio, scaleKeepRatioOne } from '../math.js';
+import { marginImageX, marginImageY, marginText, symbols, symbolSize } from '../consts.js';
+import { getPosByMargin, scaleKeepRatioOne } from '../math.js';
 const {
     loadImage
 } = can_pkg;

@@ -37,7 +37,7 @@ const asyncRun = async () => {
     const together =[...numbers,...other];
     const proms = imgs.map((img, i) => {
         return Promise.all(together.map(async e => {
-                const buff = await drawCardTop(img, e);
+                const buff = await drawCardTop(img, e, colors[i]);
                 const top = await loadImage(buff);
 
                 console.log("Rotating")

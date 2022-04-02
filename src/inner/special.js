@@ -63,6 +63,8 @@ export async function drawMainCard(img, specialRaw, crop, overlap, maxW) {
         secondY -= overlap.y ?? 0
     }
 
+    ctx.shadowColor = 'black';
+    ctx.shadowBlur = 30;
     ctx.drawImage(special,
         0, 0,
         symbolWidth, symbolHeight,

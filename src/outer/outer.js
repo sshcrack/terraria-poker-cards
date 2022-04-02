@@ -30,7 +30,8 @@ export function drawText(ctx, text, color) {
 
     pos.forEach(e => {
         const [x, y] = e;
-
+        ctx.shadowColor = color;
+        ctx.shadowBlur = 7;
         ctx.fillStyle = color;
         ctx.fillText(text, x, y);
     });

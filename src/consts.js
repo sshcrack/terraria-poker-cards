@@ -21,7 +21,7 @@ export const specialPositions = JSON.parse(fs.readFileSync("src/data/specialScal
 export const other = ["J", "Q", "K", "A"];
 
 export const symbols = ["crimson", "desert", "jungle", "snow"];
-export const colors = ["#ff1100", "#ff1100", "#000", "#000"];
+export const colors = ["#ff1100", "#FFD700", "#28650D", "#80B4E2"];
 
 //Maximum width the icons should have
 export const symbolSize = 85;

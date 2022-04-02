@@ -1,7 +1,7 @@
 import can_pkg from 'canvas';
 import fs from "fs/promises";
 import { drawBaseImage } from '../base.js';
-import { baseFile, jokerFile, jokerMax, marginText, textStyle } from '../consts.js';
+import { baseFile, colors, jokerFile, jokerMax, marginText, textStyle } from '../consts.js';
 import { getFontHeight } from '../math.js';
 import { drawMainCard } from './special.js';
 const { createCanvas, loadImage } = can_pkg
@@ -20,16 +20,28 @@ export async function drawJoker(variant) {
     ctx.imageSmoothingEnabled = false
     await drawBaseImage(ctx)
 
-    const [ marginX, marginY ] = marginText
+    const [marginX, marginY] = marginText
     const jokerText = "JOKER".split("").join("\n")
 
     let x = marginX + 20
     let y = marginY * .7
 
     const draw = (x = 0, y = 0) => {
-        ctx.font = `70${textStyle}`
-        ctx.textAlign = "center"
-        ctx.fillText(jokerText, x, y)
+        console.log("----------------")
+        jokerText.split("\n")
+            .forEach((e, i) => {
+                ctx.shadowColor = 'black';
+                ctx.shadowBlur = 15;
+                const currColor = "#000"//colors[i % colors.length]
+                const yOffset = i * 80
+                console.log("Using color", currColor, e)
+                ctx.fillStyle = currColor
+                ctx.font = `70${textStyle}`
+                ctx.textAlign = "center"
+                ctx.fillText(e, x, y + yOffset)
+            })
+        console.log("----------------")
+
     }
 
     draw(x, y)
@@ -46,6 +58,6 @@ export async function drawJoker(variant) {
 
     const end = await loadImage(canvas.toBuffer("image/png"))
     return variant === 0 ?
-        drawMainCard(end, joker, { h: .9}, {}, jokerMax[0]) :
-        drawMainCard(end, joker, { }, { y: -2}, jokerMax[0])
+        drawMainCard(end, joker, { h: .9 }, {}, jokerMax[0]) :
+        drawMainCard(end, joker, {}, { y: -2 }, jokerMax[0])
 }
