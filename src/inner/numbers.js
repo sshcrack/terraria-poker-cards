@@ -32,8 +32,8 @@ export async function drawNumbers (buff, number, symbol) {
         return buff
     }
 
-    ctx.drawImage(img, 0, 0);
-
+    ctx.drawImage(img, 0, 0); ctx.shadowColor = 'black';
+    ctx.shadowBlur = 5;
     info.positions.forEach(({ x, y, width, mirrored}) => {
         const sWidth = symbol.width
         const sHeight = symbol.height

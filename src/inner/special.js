@@ -6,18 +6,18 @@ import { mirrorSingle } from '../outer/mirror.js';
 const { loadImage, createCanvas } = can_pkg;
 function capFirst(string) { return string.charAt(0).toUpperCase() + string.slice(1); }
 
-export async function drawSpecial (buff, specialStr, _, i) {
+export async function drawSpecial (buff, specialStr, _, i, color) {
     const currSymbol = capFirst(symbols[i])
     const { crop, overlap} = specialPositions[currSymbol]?.[specialStr] ?? {}
 
 
     const img = await loadImage(buff)
     const symbolRaw = fs.readFileSync(`pics/${currSymbol}/${specialStr}.png`);
-    return drawMainCard(img, symbolRaw, crop, overlap, specialMaxW)
+    return drawMainCard(img, symbolRaw, crop, overlap, specialMaxW, color)
 
 }
 
-export async function drawMainCard(img, specialRaw, crop, overlap, maxW) {
+export async function drawMainCard(img, specialRaw, crop, overlap, maxW, color="black") {
     const special = await loadImage(specialRaw)
     const specialMirrored = await loadImage(await mirrorSingle(special))
 
@@ -63,8 +63,8 @@ export async function drawMainCard(img, specialRaw, crop, overlap, maxW) {
         secondY -= overlap.y ?? 0
     }
 
-    ctx.shadowColor = 'black';
-    ctx.shadowBlur = 30;
+    ctx.shadowColor = color;
+    ctx.shadowBlur = 45;
     ctx.drawImage(special,
         0, 0,
         symbolWidth, symbolHeight,

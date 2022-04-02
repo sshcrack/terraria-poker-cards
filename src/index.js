@@ -44,7 +44,7 @@ const asyncRun = async () => {
                 const rotated = await rotate(top);
                 const func = other.includes(e) ? drawSpecial : drawNumbers;
                 console.log("Drawing...")
-                const final = await func(rotated, e, img, i).catch(e => console.error("Error", e));
+                const final = await func(rotated, e, img, i, colors[i]).catch(e => console.error("Error", e));
 
                 console.log("Writing", `base/edited/${e}${symbols[i]}.png`)
                 fs.writeFileSync(`base/edited/${e}${symbols[i]}.png`, final);
