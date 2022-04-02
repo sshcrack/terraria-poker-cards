@@ -77,3 +77,5 @@ async function drawCardTop(img, text, color) {
 
     return canvas.toBuffer('image/png');
 }
+
+function capFirst(string) { return string.charAt(0).toUpperCase() + string.slice(1); }

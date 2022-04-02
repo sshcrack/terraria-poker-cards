@@ -30,7 +30,10 @@ export function drawSymbols(ctx, img, txtSize) {
 export async function getSymbols() {
     return await Promise.all(
         symbols
+        .map(capFirst)
         .map(e => `./pics/${e}/Symbol.png`)
         .map(e => loadImage(e))
     );
 }
+
+function capFirst(string) { return string.charAt(0).toUpperCase() + string.slice(1); }

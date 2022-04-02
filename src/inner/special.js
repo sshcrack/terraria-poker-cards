@@ -4,10 +4,10 @@ import { specialMargin, specialMaxW, specialPositions, symbols } from '../consts
 import { scaleKeepRatioSpecific } from '../math.js';
 import { mirrorSingle } from '../outer/mirror.js';
 const { loadImage, createCanvas } = can_pkg;
-
+function capFirst(string) { return string.charAt(0).toUpperCase() + string.slice(1); }
 
 export async function drawSpecial (buff, specialStr, _, i) {
-    const currSymbol = symbols[i]
+    const currSymbol = capFirst(symbols[i])
     const { crop, overlap} = specialPositions[currSymbol]?.[specialStr] ?? {}
 
 
